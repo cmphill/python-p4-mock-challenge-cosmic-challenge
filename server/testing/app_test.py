@@ -292,8 +292,8 @@ class TestApp:
             assert response['scientist_id'] == scientist.id
             assert response['planet_id'] == planet.id
             assert response['name'] == name
-            assert response['planet']
-            assert response['scientist']
+            assert response['planets']
+            assert response['scientists']
 
             mission = Mission.query.filter(
                 Mission.scientist_id == scientist.id, Mission.planet_id == planet.id).one_or_none()
